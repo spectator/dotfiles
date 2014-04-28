@@ -31,6 +31,8 @@ task :install => [:submodule_init, :submodules] do
 
   install_term_theme if RUBY_PLATFORM.downcase.include?("darwin")
 
+  Rake::Task["install_local"].execute
+
   run_bundle_config
 
   success_msg("installed")
@@ -356,4 +358,13 @@ def success_msg(action)
   (_______\_____|\____|_|
   }
   puts "YADR has been #{action}. Please restart your terminal and vim."
+end
+
+task :install_local do
+  puts "======================================================"
+  puts "Installing local customizations"
+  puts "======================================================"
+
+  file_operation(Dir.glob('locals/*'))
+  file_operation(Dir.glob('brew/*'))
 end
