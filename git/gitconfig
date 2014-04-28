@@ -100,6 +100,8 @@
   summary = true
   verbosity = 1
   tool = mvimdiff
+  strategy = recursive
+  strategy-option = patience
 [apply]
   whitespace = nowarn
 [branch]

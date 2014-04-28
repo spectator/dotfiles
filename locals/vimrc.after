@@ -1,0 +1,58 @@
+" let console vim be pretty too
+"
+let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
+
+" set text width
+"
+set textwidth=79
+
+" check to make sure vim has been compiled with colorcolumn support before
+" enabling it
+"
+if exists("+colorcolumn")
+  set colorcolumn=79
+endif
+
+" switch between buffers
+"
+noremap <tab> :bn<CR>
+noremap <S-tab> :bp<CR>
+
+" close buffer
+"
+nmap <leader><leader>d :bd<CR>
+
+" close all buffers
+"
+nmap <leader><leader>D :bufdo bd<CR>
+
+" edit/view files relative to current directory
+"
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+map <leader>e :edit %%
+
+" switch between last two buffers
+"
+nnoremap <leader><space> <c-^>
+noremap <leader><space> <c-^>
+
+" use :w!! to write to a file using sudo if you forgot to 'sudo vim file'
+" (it will prompt for sudo password when writing)
+cmap w!! %!sudo tee > /dev/null %
+
+" find merge conflict markers
+"
+nmap <silent> <leader>fc <ESC>/\v^[<=>]{7}( .*\|$)<CR>
+
+" map jj to ESC
+"
+imap jj <Esc>
+
+" add spell checking and automatic wrapping at the recommended 72 columns to you
+" commit messages
+"
+" http://robots.thoughtbot.com/post/48933156625/5-useful-tips-for-a-better-commit-message
+"
+autocmd Filetype gitcommit setlocal spell textwidth=72
