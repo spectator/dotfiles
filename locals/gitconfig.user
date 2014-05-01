@@ -9,3 +9,5 @@
   sm = smart-merge
 [credential]
   helper = osxkeychain
+[color]
+  ui = always
