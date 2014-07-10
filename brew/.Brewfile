@@ -2,6 +2,7 @@ install zsh
 install macvim --custom-icons --override-system-vim --with-lua --with-luajit
 
 install git
+install mercurial
 install hub
 
 install ctags
@@ -12,3 +13,5 @@ install openssl
 
 install rbenv
 install ruby-build
+
+install go
