@@ -3,6 +3,7 @@ install macvim --custom-icons --override-system-vim --with-lua --with-luajit
 
 install git
 install mercurial
+install bzr
 install hub
 
 install ctags
