@@ -1,10 +1,11 @@
 install zsh
-install macvim --custom-icons --override-system-vim --with-lua --with-luajit
+install lua
+install luajit
+install install macvim --with-features=huge --enable-multibyte --with-macarchs=x86_64 --enable-perlinterp --enable-rubyinterp --enable-tclinterp --with-ruby-co --custom-icons --override-system-vim --with-lua --with-luajit
 
 install git
 install mercurial
 install bzr
-install hub
 
 install ctags
 install the_silver_searcher
