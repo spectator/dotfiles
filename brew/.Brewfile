@@ -17,3 +17,7 @@ install rbenv
 install ruby-build
 
 install go
+
+install caskroom/cask/brew-cask
+cask install virtualbox
+cask install vagrant
