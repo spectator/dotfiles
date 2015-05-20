@@ -21,3 +21,4 @@ install go
 install caskroom/cask/brew-cask
 cask install virtualbox
 cask install vagrant
+cask install heroku-toolbelt
