@@ -6,6 +6,8 @@ let g:syntastic_auto_jump=0
 let g:syntastic_auto_loc_list=1
 "don't care about warnings
 let g:syntastic_quiet_messages = {'level': 'warnings'}
+"respect current rbenv version
+let g:syntastic_ruby_mri_exec = $HOME."/.rbenv/shims/ruby"
 
 " Default to eslint. If you need jshint, you can override this in
 " ~/.vimrc.after
