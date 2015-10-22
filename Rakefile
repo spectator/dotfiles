@@ -376,6 +376,6 @@ task :install_local do
   puts "Installing local customizations"
   puts "======================================================"
 
-  file_operation(Dir.glob('locals/*'))
-  file_operation(Dir.glob('brew/*'))
+  install_files(Dir.glob('locals/*'))
+  install_files(Dir.glob('brew/*'))
 end
