@@ -56,3 +56,6 @@ imap jj <Esc>
 " http://robots.thoughtbot.com/post/48933156625/5-useful-tips-for-a-better-commit-message
 "
 autocmd Filetype gitcommit setlocal spell textwidth=72
+
+" ES6 support
+autocmd BufRead,BufNewFile *.es6 setfiletype javascript
