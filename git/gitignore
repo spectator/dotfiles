@@ -56,3 +56,6 @@ Procfile.dev
 .env
 
 stdout
+.idea
+.byebug_history
+.agignore
