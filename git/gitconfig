@@ -59,6 +59,9 @@
   # push
   ps = push                         # push
 
+  # force push
+  pf = push --force-with-lease
+
   # rebase
   rc = rebase --continue            # continue rebase
   rs = rebase --skip                # skip rebase
@@ -138,3 +141,6 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[user]
+	name = Yury Velikanau
+	email = yury.velikanau@gmail.com
