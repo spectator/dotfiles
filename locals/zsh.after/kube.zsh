@@ -1,1 +1,1 @@
-export KUBECONFIG=$KUBECONFIG:$HOME/.kube/staging-config
+export KUBECONFIG=$KUBECONFIG:$HOME/.kube/config
