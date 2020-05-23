@@ -68,3 +68,7 @@ stdout
 .byebug_history
 .agignore
 .nvmrc
+
+# Rubymine
+.generators
+.rakeTasks
