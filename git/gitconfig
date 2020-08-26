@@ -121,7 +121,7 @@
 [core]
   autocrlf = false
   editor = vim
-  excludesfile = ~/.yadr/git/gitignore
+	excludesfile = /Users/spectator/.yadr/git/gitignore
 [advice]
   statusHints = false
 [diff]
@@ -138,6 +138,7 @@
   path = .gitconfig.user
 [commit]
 	gpgsign = true
+	template = /Users/spectator/.stCommitMsg
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -146,3 +147,5 @@
 [user]
 	name = Yury Velikanau
 	email = yury.velikanau@gmail.com
+[init]
+	defaultBranch = main

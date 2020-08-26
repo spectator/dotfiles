@@ -53,7 +53,6 @@ Session.vim
 # Foreman
 # ----------------------------------------------------------------------------------------------
 Procfile.dev
-.env.development
 
 # Webpacker
 # ----------------------------------------------------------------------------------------------
@@ -68,7 +67,18 @@ stdout
 .byebug_history
 .agignore
 .nvmrc
+spec/examples.txt
 
 # Rubymine
 .generators
 .rakeTasks
+
+# IRB
+.irbrc
+.irb_history
+
+# Python
+.python-version
+
+# asdf-vm
+.tool-versions
