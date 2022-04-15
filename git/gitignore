@@ -82,3 +82,9 @@ spec/examples.txt
 
 # asdf-vm
 .tool-versions
+
+# VS Code
+.vscode
+
+# direnv
+.envrc
