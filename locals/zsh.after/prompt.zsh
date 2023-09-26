@@ -1,1 +1,2 @@
-prompt sorin
+# prompt sorin
+eval "$(starship init zsh)"

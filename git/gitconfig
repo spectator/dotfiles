@@ -43,12 +43,12 @@
   cp = cherry-pick -x               # grab a change from a branch
 
   # diff
-  d = diff                          # diff unstaged changes
+  d = !tig                          # diff unstaged changes
   dc = diff --cached                # diff staged changes
   last = diff HEAD^                 # diff last committed change
 
   # log
-  l = log --graph --date=short
+  l = !tig
   ls = log --graph --date=short --show-signature
   changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
   short = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\"
@@ -99,13 +99,13 @@
   pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
 [mergetool]
   prompt = false
-[mergetool "mvimdiff"]
-  cmd="mvim -c 'Gdiff' $MERGED"     # use fugitive.vim for 3-way merge
+[mergetool "nvim"]
+  cmd="nvim -d -O $MERGED"
   keepbackup=false
 [merge]
   summary = true
   verbosity = 1
-  tool = mvimdiff
+  tool = nvim -d -O
   strategy = recursive
   strategy-option = patience
 [apply]
@@ -120,8 +120,8 @@
   pushdefault = origin
 [core]
   autocrlf = false
-  editor = vim
-	excludesfile = /Users/spectator/.yadr/git/gitignore
+  editor = nvim
+	excludesfile = /Users/yuryvelikanau/.gitignore_global
 [advice]
   statusHints = false
 [diff]
@@ -138,7 +138,7 @@
   path = .gitconfig.user
 [commit]
 	gpgsign = true
-	template = /Users/spectator/.stCommitMsg
+	template = /Users/yuryvelikanau/.stCommitMsg
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -147,7 +147,15 @@
 [user]
 	name = Yury Velikanau
 	email = yury.velikanau@gmail.com
+	signingkey = FA38AC75EA16C6F3
 [init]
 	defaultBranch = main
 [gpg]
 	program = gpg
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[credential]
+	helper = /usr/local/share/gcm-core/git-credential-manager
