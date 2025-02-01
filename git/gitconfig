@@ -35,6 +35,9 @@
   amend = commit --amend            # ammend your last commit
   ammend = commit --amend           # ammend your last commit
 
+  # switch
+  sw = switch
+
   # checkout
   co = checkout                     # checkout
   nb = checkout -b                  # create and switch to a new branch (mnemonic: "git new branch branchname...")
@@ -155,7 +158,6 @@
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
-[credential "https://dev.azure.com"]
-	useHttpPath = true
 [credential]
+	helper =
 	helper = /usr/local/share/gcm-core/git-credential-manager
