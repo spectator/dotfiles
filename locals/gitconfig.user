@@ -4,9 +4,6 @@
 [user]
   name  = Yury Velikanau
   email = yury.velikanau@gmail.com
-[alias]
-  sp = smart-pull
-  sm = smart-merge
 [credential]
   helper = osxkeychain
 [color]
